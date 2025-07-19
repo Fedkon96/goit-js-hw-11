@@ -16,7 +16,7 @@ import {
   hideLoader,
   clearMarkUp,
   createLightbox,
-} from './js/render_functions.js';
+} from './js/render-functions.js';
 
 // !submit
 function onSubmit(event) {
