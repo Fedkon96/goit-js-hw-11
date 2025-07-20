@@ -4,7 +4,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { refs } from '../main';
 
 export function createGallery(arr) {
-  return arr
+  const markup = arr
     .map(
       item =>
         `<li class="img-box">
@@ -37,9 +37,14 @@ export function createGallery(arr) {
         </li>`
     )
     .join('');
+
+  refs.galleryList.innerHTML = markup;
+
+  gallery.refresh();
 }
 
 const gallery = new SimpleLightbox('.gallery a');
+
 export function createLightbox() {
   gallery.refresh();
 }

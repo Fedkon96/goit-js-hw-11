@@ -44,8 +44,8 @@ function onSubmit(event) {
           position: 'center',
         });
       } else {
-        refs.galleryList.innerHTML = createGallery(res.hits);
-        createLightbox();
+        createGallery(res.hits);
+        // createLightbox();
       }
     })
     .catch(error => {
