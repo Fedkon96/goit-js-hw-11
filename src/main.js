@@ -11,11 +11,10 @@ export const refs = {
 };
 
 import {
-  createGallery,
+  renderGalleryList,
   showLoader,
   hideLoader,
   clearMarkUp,
-  createLightbox,
 } from './js/render-functions.js';
 
 // !submit
@@ -44,8 +43,7 @@ function onSubmit(event) {
           position: 'center',
         });
       } else {
-        createGallery(res.hits);
-        // createLightbox();
+        renderGalleryList(res.hits);
       }
     })
     .catch(error => {

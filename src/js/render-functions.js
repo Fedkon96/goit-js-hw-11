@@ -3,8 +3,8 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { refs } from '../main';
 
-export function createGallery(arr) {
-  const markup = arr
+export function createMarkUp(array) {
+  const markup = array
     .map(
       item =>
         `<li class="img-box">
@@ -39,9 +39,13 @@ export function createGallery(arr) {
     .join('');
 
   refs.galleryList.innerHTML = markup;
-
-  gallery.refresh();
 }
+
+export const renderGalleryList = array => {
+  clearMarkUp();
+  createMarkUp(array);
+  createLightbox();
+};
 
 const gallery = new SimpleLightbox('.gallery a');
 
